@@ -5,7 +5,7 @@ const Loading = () => <p>Loading…</p>
 const Home = React.lazy( () => import( './pages/Home' ) )
 const ProjectList = React.lazy( () => import( './pages/Project-list' ) )
 const ProjectDetail = React.lazy( () => import( './pages/Project-detail' ) )
-const Contact = React.lazy( () => import( './pages/contact' ) )
+const Contact = React.lazy( () => import( './pages/Contact' ) )
 
 const AppRouter: React.FC<any> = () => {
   return (

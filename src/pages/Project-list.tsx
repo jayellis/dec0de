@@ -13,7 +13,7 @@ const ProjectList: React.FC<any> = () => {
       </h1>
       <ul>
         { projects && projects.map( ( project: ProjectData, index: number ) => ( 
-          <ProjectCard {...project} />
+          <ProjectCard {...project} key={ index } />
         ) ) }
       </ul>
     </>

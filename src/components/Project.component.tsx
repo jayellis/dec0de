@@ -6,7 +6,7 @@ import ImageCard from './Image.component'
 
 const renderImages = ( images: ImageData[] ) => {
   return images.map( ( image: ImageData, index: number ) => {
-    return <ImageCard {...image} />
+    return <ImageCard {...image} key={ index } />
   } )
 }
 
@@ -21,18 +21,16 @@ const ProjectCard: React.FC<ProjectData> = ( {
   const fullUrl = '/work/' + title.toLowerCase().replace(/ /g, '_')
 
   return (
-    <>
-      <li key={ id } >
-        <h2>{ title }</h2>
-        <p>{ client }</p>
-        <Link to={ fullUrl } >
-          <p>Go</p>
-        </Link>
-        <div className='gallery'>
-          { renderImages( images ) } 
-        </div>
-      </li>
-    </>
+    <li key={ id } className='project-card' >
+      <h2>{ title }</h2>
+      <p>{ client }</p>
+      <Link to={ fullUrl } >
+        <p>Go</p>
+      </Link>
+      <div className='gallery'>
+        { renderImages( images ) } 
+      </div>
+    </li>
   )
 }
 

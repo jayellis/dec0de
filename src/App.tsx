@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/reset.css'
 import './styles/App.scss'
 import AppRouter from './Approuter'
 import Header from './components/Header.component'

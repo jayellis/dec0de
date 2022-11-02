@@ -5,6 +5,9 @@
       "title":"My Second Project",
       "client":"client 1",
       "completeddate":"1666782",
+      "background":"linear-gradient(180deg, #d03737 0%, #ff8700 100%)",
+      "logo":"",
+      "hero":"",
       "images": [
         {
           "url":"https://via.placeholder/150",
