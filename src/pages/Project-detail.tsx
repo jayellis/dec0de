@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import ProjectData from '../types/Project.type'
 import ImageData from '../types/Image.type'
-import ImageCard from '../components/Image.component'
+import GalleryComponent from '../components/gallery.component'
 
 import { getProject } from '../services/api'
 
@@ -28,11 +28,8 @@ const ProjectDetail: React.FC = () => {
         { project.hero ? <div className='hero'></div> : '' }
       </section>
 
-      <div className='gallery'>
-        { project.images.map( ( image: ImageData, index: number ) => (
-          <ImageCard { ...image } key={ 'project-' + index } />
-        ) ) }
-      </div>
+      <GalleryComponent { ...project }/>
+
     </div>
   )
 }

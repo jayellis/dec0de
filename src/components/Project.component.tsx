@@ -6,7 +6,8 @@ import ImageCard from './Image.component'
 
 const renderImages = ( images: ImageData[] ) => {
   return images.map( ( image: ImageData, index: number ) => {
-    return <ImageCard {...image} key={ index } />
+    if( index === 0 ) return <ImageCard {...image} key={ index } />
+      else return ''
   } )
 }
 
